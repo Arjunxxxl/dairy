@@ -1,0 +1,66 @@
+<center><h2 class="Welcome">Welcome, {{user.name}}</h2></center>
+
+<div id="products">
+<div class="products"><b><h3>Products</h3></b></div>
+<div class="container">
+<div class="row" id="pro">
+<div class="col-sm-4">
+    <div class="card text-center">
+    <img class="card-img-top" src="../assets/milk.jpg" height="180" alt="Card image cap">
+      <div class="card-block">
+        <h3 class="card-title">Milk</h3>
+        <p class="card-text"><strong>Price-</strong>123</p>
+        <a href="/users/milk?mobile={{user.mobile}}&&address={{user.address}}" class="btn btnn btn-primary">View</a>
+      </div>
+    </div>
+</div>
+
+<div class="col-sm-4">
+    <div class="card text-center">
+    <img class="card-img-top" src="../assets/curd.jpg" height="180" alt="Card image cap">
+      <div class="card-block">
+        <h3 class="card-title">Curd</h3>
+        <p class="card-text"><strong>Price-</strong>123</p>
+        <a href="/users/curd?mobile={{user.mobile}}&&address={{user.address}}" class="btn btnn btn-primary">View</a>
+      </div>
+    </div>
+</div>
+
+<div class="col-sm-4">
+    <div class="card text-center">
+    <img class="card-img-top" src="../assets/ghee.jpg" height="180" alt="Card image cap">
+      <div class="card-block">
+        <h3 class="card-title">Ghee</h3>
+        <p class="card-text"><strong>Price-</strong>123</p>
+        <a href="/users/ghee?mobile={{user.mobile}}&&address={{user.address}}" class="btn btnn btn-primary">View</a>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="junbotron call junbotron-fluid">
+	 <div class="row container">
+	 <h3 class="col-sm-6 h">Call us </h3>
+	 <h2 class="col-sm-6 H">7728999684</h2>
+	 </div>
+</div>
+
+<div class="query">
+	<div  class="container-fluid h3">Submit your query</div>
+	<form method="post" action="/users/email" class="email">
+	 <div class="form-group">
+     <textarea class="form-control" id="exampleTextarea" name="query" rows="5" placeholder="Write you query here(we respond within 24 hours)"></textarea>
+  </div>
+   		<center><button type="submit" class="btn btnnn btn-default">Send</button></center>
+   		<div class="form-group">
+		<input name="name" value={{user.name}} class="form-control hide" />
+	 <input name="mobile" value={{user.mobile}} class="form-control hide" />
+	</div>	
+	</form>
+</div>
+
+<div class="helo row container-fluid">
+  <div class="col-sm-6 o">&copy; 2015 Desi Cow's Milk</div>
+</div>

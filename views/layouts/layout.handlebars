@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../assets/desicow_welcome.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+  <div class ="" id="top">
+             <div class="title"><b class="title"><i>Desi Cow's Milk</i></b></div>
+  </div>
+             <div class="n">
+                <ul class="nav justify-content-center">
+                 
+                  {{#if user}}
+                  <li class="nav-item">
+                           <a class="nav-link " href="/users/dashboard?mobile={{user.mobile}}&&address={{user.address}}" id="dashboard">Dashboard</a>
+                  </li>
+                   <li class="nav-item">
+                           <a class="nav-link " href="/users/mysubscription?mobile={{user.mobile}}&&address={{user.address}}" id="subscription">My Subscription</a>
+                  </li>
+                   <li class="nav-item">
+                           <a class="nav-link " href="/users/logout" id="logout">Logout</a>
+                  </li>
+                  {{else}}
+                   <li class="nav-item">
+                          <a class="nav-link" href="/users/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                           <a class="nav-link " href="/users/login" id="login">Login</a>
+                  </li>
+                    <li class="nav-item">
+                           <a class="nav-link " href="/users/regester" id="signup">signup</a>
+                  </li>
+                 
+                  {{/if}}
+               </ul>
+      </div> 
+
+
+ {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+{{{body}}}
+
+
+
+
+    <script type="text/javascript" src="../assets/jquery-3.2.1.js"></script> <!--important-->
+    <script type="text/javascript" src="../assets/jquery-3.2.1.min.js"></script> 
+    
+    <script src="../assets/home.js"></script>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> ALREADY INCLUDED-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

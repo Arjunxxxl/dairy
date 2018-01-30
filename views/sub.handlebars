@@ -1,0 +1,66 @@
+{{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+{{/if}}
+<center class="Welcome"><strong>Welcome {{user.name}}</strong>,({{user.mobile}})</center>
+<center class="Welcome"><strong>Delivery address: </strong>{{user.address}},Jaipur(Raj.)</center>
+
+<br><br>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active milk" href="/users/mysubscription?mobile={{user.mobile}}&&address={{user.address}}">Milk</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link curd" href="/users/mysubscription_curd?mobile={{user.mobile}}&&address={{user.address}}">Curd</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link ghee" href="/users/mysubscription_ghee?mobile={{user.mobile}}&&address={{user.address}}">Ghee</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link update" href="/users/mysubscription_up?mobile={{user.mobile}}&&address={{user.address}}">Update your data</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link submit" href="/users/mysubscription_q?mobile={{user.mobile}}&&address={{user.address}}">Submit your query</a>
+  </li>
+</ul>
+
+
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <th scope="row" class="table_title">Product</th>
+      <td class="table_d"> {{data.product}}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="table_title">Delivery Address</th>
+      <td class="table_d">{{data.address}}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="table_title">Start Date</th>
+       <td class="table_d">{{data.date}}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="table_title">Duration</th>
+       <td class="table_d">{{data.duration}}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="table_title">Amount</th>
+       <td class="table_d"> {{data.amount}} ₹/-</td>
+    </tr>
+    <tr>
+      <th scope="row" class="table_title">Payment</th>
+       <td class="table_d">{{data.payment}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="unsub"><a href="/users/unsubscribe_milk?mobile={{user.mobile}}&&address={{user.address}}">Unsubscribe</a></div>
+<div class="cl"><p>Your subscription will automatically ends in {{data.duration}} from {{data.date}}.<a class="lol" href="/users/milk?mobile={{user.mobile}}">CLICK HERE TO SUBSCRIBE AGAIN</a></p>
+</div>
+
+<div class="helloo row container-fluid">
+  <div class="col-sm-6 o">&copy; 2015 Desi Cow's Milk</div>
+</div>
+
+<script type="text/javascript" src="../assets/jquery-3.2.1.js"></script> <!--important-->
+<script src="../assets/home.js"></script>

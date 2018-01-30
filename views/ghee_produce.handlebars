@@ -1,0 +1,67 @@
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<center><h2 class="gg">Comming Soon</h2></center>
+<br><br>
+<div class="row milk_sub">
+	<div class="col-sm-7">
+		<img src="../assets/img2-1.jpg">
+	</div>
+	<div class="col-sm-5">
+		<form method="post" action="/users/milk_sub">
+		<center><p > Field with <span class="red">*</span> are required </p></center>
+		<fieldset disabled>
+			<div class="form-group row m1">
+      
+    			<label  class="col-sm-4 col-form-label">Mobile</label>
+    			<input type="tel" class="form-control col-sm-8" name="mobile" value={{user.mobile}}>
+  			</div>
+  			<div class="form-group row m2">
+    			<label  class="col-sm-4 col-form-label">Name</label>
+    			<input type="tel" class="form-control col-sm-8" name="nameo" value={{user.name}}>
+  			</div>
+  			<div class="form-group row m8">
+    			<label  class="col-sm-4 col-form-label">Address</label>
+    			<input  name="address" rows="1" class="form-control col-sm-8" value="{{user.address}}"> 
+  			</div>
+  			
+  			<div class="form-group row m3">
+    			<label  class="col-sm-4 col-form-label">Product</label>
+    			<input type="tel" class="form-control col-sm-8" name="product" value="Ghee">
+  			</div>
+  			<div class="form-group row m4">
+    			<label  class="col-sm-4 col-form-label">Price</label>
+    			<input type="tel" class="form-control col-sm-8" name="price" value="--Rs/Day">
+  			</div>
+  		
+  			<div class="form-group row m5">
+    			<label  class="col-sm-4 col-form-label">Start Date<span class="red">*</span></label>
+    			<input type="date" class="form-control col-sm-8" name="date">
+  			</div>
+  			<div class="form-group row m6">
+    			<label  class="col-sm-4 col-form-label">Duration<span class="red">*</span></label>
+    			<select name="duration" class="form-control col-sm-8" id="thedropdown">
+    			<option value="so">Select one</option>
+					<option value="oneday">1 Day</option>
+					<option value="fiften">15 Days</option>
+					<option value="onemonth">1 Month</option>
+				</select>
+  			</div>	
+  			<fieldset disabled>
+  			<div class="form-group row m7">
+    			<label  class="col-sm-4 col-form-label">Amount</label>
+    			<input type="text" class="form-control col-sm-8" name="amount" id="amt" placeholder="Comming Soon">
+  			</div>
+  			</fieldset><br>
+  			<center><button type="submit" class="btn btn-default" id="milk_btn">Comming Soon</button></center>
+        </fieldset>
+		</form>
+	</div>
+</div>
+<div class="hello row container-fluid">
+  <div class="col-sm-6 o">&copy; 2015 Desi Cow's Milk</div>
+</div>
+<script type="text/javascript" src="../assets/jquery-3.2.1.js"></script> <!--important-->
+<script src="../assets/milk.js"></script>
